@@ -1,3 +1,7 @@
+using System.Diagnostics;
+using System.Drawing.Design;
+using System.IO.Ports;
+
 namespace IwskSekcjaXMikroproj
 {
     public partial class Form1 : Form
@@ -11,8 +15,9 @@ namespace IwskSekcjaXMikroproj
             Master,
             Slave
         }
-        
+
         private Transmit transmit;
+        public SerialPort serial;
 
         public Form1()
         {
@@ -20,6 +25,7 @@ namespace IwskSekcjaXMikroproj
 
             InitializeComponent();
 
+            portCB.Items.AddRange(SerialPort.GetPortNames());
             stationTypeCB.DataSource = Enum.GetValues(typeof(StationType));
             flowControlTypeCB.DataSource = Enum.GetValues(typeof(FlowControl));
             transmissionSpeedBytesCB.DataSource = speedRate;
@@ -59,7 +65,7 @@ namespace IwskSekcjaXMikroproj
             config.TransmissionType = TransmissionType.Textual;
 
             config.Validate();
-            
+
             return config;
         }
     }

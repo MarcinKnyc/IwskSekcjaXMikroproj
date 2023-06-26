@@ -1,4 +1,6 @@
-﻿namespace IwskSekcjaXMikroproj
+﻿using System.IO.Ports;
+
+namespace IwskSekcjaXMikroproj
 {
     public class Config
     {
@@ -9,6 +11,7 @@
         public char ControlLetter { get; set; } //E, O, N
         public FlowControl FlowControlType { get; set; } // 0 - None, 
         public TransmissionType TransmissionType { get; set; } // only textual is obligator
+
         // buttons: Nadawanie, Odbiór and Ping
         // powinno być okienko z tekstem wysłanej / odebranej ramki w dwóch formach: hexadecymalna i tekstowa
         

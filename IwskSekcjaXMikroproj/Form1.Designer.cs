@@ -50,6 +50,8 @@
             pingBT = new Button();
             receiveBT = new Button();
             sendBT = new Button();
+            label11 = new Label();
+            portCB = new ComboBox();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
             SuspendLayout();
@@ -102,6 +104,8 @@
             // 
             // panel1
             // 
+            panel1.Controls.Add(label11);
+            panel1.Controls.Add(portCB);
             panel1.Controls.Add(label10);
             panel1.Controls.Add(stationTypeCB);
             panel1.Controls.Add(label8);
@@ -123,7 +127,7 @@
             // label10
             // 
             label10.AutoSize = true;
-            label10.Location = new Point(3, 57);
+            label10.Location = new Point(6, 108);
             label10.Name = "label10";
             label10.Size = new Size(93, 20);
             label10.TabIndex = 18;
@@ -132,7 +136,7 @@
             // stationTypeCB
             // 
             stationTypeCB.FormattingEnabled = true;
-            stationTypeCB.Location = new Point(3, 81);
+            stationTypeCB.Location = new Point(6, 132);
             stationTypeCB.Margin = new Padding(3, 4, 3, 4);
             stationTypeCB.Name = "stationTypeCB";
             stationTypeCB.Size = new Size(284, 28);
@@ -141,7 +145,7 @@
             // label8
             // 
             label8.AutoSize = true;
-            label8.Location = new Point(3, 346);
+            label8.Location = new Point(6, 397);
             label8.Name = "label8";
             label8.Size = new Size(159, 20);
             label8.TabIndex = 16;
@@ -150,7 +154,7 @@
             // flowControlTypeCB
             // 
             flowControlTypeCB.FormattingEnabled = true;
-            flowControlTypeCB.Location = new Point(3, 370);
+            flowControlTypeCB.Location = new Point(6, 421);
             flowControlTypeCB.Margin = new Padding(3, 4, 3, 4);
             flowControlTypeCB.Name = "flowControlTypeCB";
             flowControlTypeCB.Size = new Size(284, 28);
@@ -159,7 +163,7 @@
             // label9
             // 
             label9.AutoSize = true;
-            label9.Location = new Point(3, 287);
+            label9.Location = new Point(6, 338);
             label9.Name = "label9";
             label9.Size = new Size(107, 20);
             label9.TabIndex = 14;
@@ -168,7 +172,7 @@
             // controlLetterCB
             // 
             controlLetterCB.FormattingEnabled = true;
-            controlLetterCB.Location = new Point(3, 311);
+            controlLetterCB.Location = new Point(6, 362);
             controlLetterCB.Margin = new Padding(3, 4, 3, 4);
             controlLetterCB.Name = "controlLetterCB";
             controlLetterCB.Size = new Size(284, 28);
@@ -177,7 +181,7 @@
             // label6
             // 
             label6.AutoSize = true;
-            label6.Location = new Point(3, 231);
+            label6.Location = new Point(6, 282);
             label6.Name = "label6";
             label6.Size = new Size(144, 20);
             label6.TabIndex = 12;
@@ -186,7 +190,7 @@
             // dataBitsNumberCB
             // 
             dataBitsNumberCB.FormattingEnabled = true;
-            dataBitsNumberCB.Location = new Point(3, 255);
+            dataBitsNumberCB.Location = new Point(6, 306);
             dataBitsNumberCB.Margin = new Padding(3, 4, 3, 4);
             dataBitsNumberCB.Name = "dataBitsNumberCB";
             dataBitsNumberCB.Size = new Size(284, 28);
@@ -195,7 +199,7 @@
             // label5
             // 
             label5.AutoSize = true;
-            label5.Location = new Point(3, 172);
+            label5.Location = new Point(6, 223);
             label5.Name = "label5";
             label5.Size = new Size(134, 20);
             label5.TabIndex = 10;
@@ -204,7 +208,7 @@
             // stopBitsNumberCB
             // 
             stopBitsNumberCB.FormattingEnabled = true;
-            stopBitsNumberCB.Location = new Point(3, 196);
+            stopBitsNumberCB.Location = new Point(6, 247);
             stopBitsNumberCB.Margin = new Padding(3, 4, 3, 4);
             stopBitsNumberCB.Name = "stopBitsNumberCB";
             stopBitsNumberCB.Size = new Size(284, 28);
@@ -213,7 +217,7 @@
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(3, 113);
+            label4.Location = new Point(6, 164);
             label4.Name = "label4";
             label4.Size = new Size(203, 20);
             label4.TabIndex = 8;
@@ -222,7 +226,7 @@
             // transmissionSpeedBytesCB
             // 
             transmissionSpeedBytesCB.FormattingEnabled = true;
-            transmissionSpeedBytesCB.Location = new Point(3, 137);
+            transmissionSpeedBytesCB.Location = new Point(6, 188);
             transmissionSpeedBytesCB.Margin = new Padding(3, 4, 3, 4);
             transmissionSpeedBytesCB.Name = "transmissionSpeedBytesCB";
             transmissionSpeedBytesCB.Size = new Size(284, 28);
@@ -272,6 +276,24 @@
             sendBT.UseVisualStyleBackColor = true;
             sendBT.Click += sendBT_Click;
             // 
+            // label11
+            // 
+            label11.AutoSize = true;
+            label11.Location = new Point(6, 52);
+            label11.Name = "label11";
+            label11.Size = new Size(93, 20);
+            label11.TabIndex = 20;
+            label11.Text = "Wybór portu";
+            // 
+            // portCB
+            // 
+            portCB.FormattingEnabled = true;
+            portCB.Location = new Point(6, 76);
+            portCB.Margin = new Padding(3, 4, 3, 4);
+            portCB.Name = "portCB";
+            portCB.Size = new Size(284, 28);
+            portCB.TabIndex = 19;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -316,5 +338,7 @@
         private Button receiveBT;
         private Label label10;
         private ComboBox stationTypeCB;
+        private Label label11;
+        private ComboBox portCB;
     }
 }
