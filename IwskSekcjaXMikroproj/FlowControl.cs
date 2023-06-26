@@ -3,7 +3,9 @@
     public enum FlowControl
     {
         None,
-        StandardTerminator, // (CR, LF, CR-LF)
+        CR, // (CR, LF, CR-LF)
+        LF,
+        CRLF,
         OwnTerminator // terminator „własny” 1 lub 2 znakowy
     }
 }

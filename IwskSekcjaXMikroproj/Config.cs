@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace IwskSekcjaXMikroproj
+﻿namespace IwskSekcjaXMikroproj
 {
     public class Config
     {
@@ -17,11 +11,7 @@ namespace IwskSekcjaXMikroproj
         public TransmissionType TransmissionType { get; set; } // only textual is obligator
         // buttons: Nadawanie, Odbiór and Ping
         // powinno być okienko z tekstem wysłanej / odebranej ramki w dwóch formach: hexadecymalna i tekstowa
-
-        public Config() 
-        {
-            Validate();
-        }
+        
         public void Validate()
         {
             if (!(TransmissionSpeedBytes >= 150 && TransmissionSpeedBytes <= 115000))
@@ -31,7 +21,7 @@ namespace IwskSekcjaXMikroproj
         }
 
         #region master
-        public string MasterTransmittedTextualData { get; set; }
+        public string MasterTransmittedTextualData { get; set; } = null!;
         public int MasterTimeoutMiliseconds { get; set; } // 0-10s
         public int MasterRetriesNumber { get; set; } // 0-5
         public int MasterTimeLimit { get; set; } // 0-1s
